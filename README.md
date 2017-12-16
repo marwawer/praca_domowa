@@ -27,16 +27,14 @@ Aby przeliczyć liczbę z systemu dziesiątkowego na inny, należy wykonać dzie
 
 |     dwójkowy     | ósemkowy |  szesnastkowy   | 
 |     ------------ |--------  |---------------  |
-|` 6 / 2 = 3 reszty 0`|`132 / 8 = 16 reszty 4`|                 |
-|` 3 / 2 = 1 reszty 1`|`16  / 8 = 2  reszty 0`|                 |
-|` 1 / 2 = 0 reszty 1`|`2   / 8 = 0  reszty 2`|                 | 
-|     wynik        |       wynik           |      wynik      |
-| `110`| `204`| |
+|` 6 / 2 = 3 reszty 0`|`132 / 8 = 16 reszty 4`|`1410 / 16 = reszty 2` |
+|` 3 / 2 = 1 reszty 1`|` 16 / 8 = 2  reszty 0`|`  88 / 16 = reszty 8` |
+|` 1 / 2 = 0 reszty 1`|`2   / 8 = 0  reszty 2`|   `5 / 16 = reszty 5` | 
+|     `wynik = 110`   |       `wynik = 204`    |    `wynik = 582`     |
+ 
 
 
 
 
     
- skąd
-
-`132 ( 10 ) = 204 ( 8 )`
+ 
