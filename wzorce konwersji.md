@@ -1,4 +1,4 @@
-- Funkcja scanf
+**Funkcja scanf**
 ---
 Deklaracja int scanf ( const char *format, wskaźnik, wskaźnik, ... ) ;
 Biblioteka stdio.h
