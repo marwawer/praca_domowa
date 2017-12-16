@@ -1,39 +1,28 @@
 **Funkcja scanf**
 ---
-Deklaracja int scanf ( const char *format, wskaźnik, wskaźnik, ... ) ;
-Biblioteka stdio.h
+Deklaracja: **int scanf** ( const char *format, wskaźnik, wskaźnik, ... )
+Biblioteka: **stdio.h**
 Działanie
-Funkcja scanf wczytuje kolejne pola (ciągi znaków), ograniczone
-znakiem spacji ' ' lub nowej linii '\n'. Obrazy wczytywanych
-znaków są wyświetlane na ekranie monitora. Liczba wczytywanych
-pól i sposób ich przetwarzania są zadawane za pomocą pierwszego
-argumentu funkcji scanf , oznaczonego identyfikatorem format ,
-którego wartością jest ciąg znaków (teskt). Ciąg ten składa się z
-pewnej liczby wzorców konwersji  liczba wzorców występujących
-w formacie określa liczbę pól wczytywanych ze strumienia
-wejściowego (klawiatury) i liczbę wskaźników będących dalszymi
-argumentami funkcji scanf . Wzorzec konwersji ma następującą
+Funkcja scanf wczytuje kolejne pola (ciągi znaków), ograniczone znakiem spacji ' ' lub nowej linii '\n'. Obrazy wczytywanych
+znaków są wyświetlane na ekranie monitora. Liczba wczytywanych pól i sposób ich przetwarzania są zadawane za pomocą pierwszego
+argumentu funkcji scanf , oznaczonego identyfikatorem format, którego wartością jest ciąg znaków `tekst`. Ciąg ten składa się z
+pewnej liczby wzorców konwersji -  liczba wzorców występujących w formacie określa liczbę pól wczytywanych ze strumienia
+wejściowego (klawiatury) i liczbę wskaźników będących dalszymiargumentami funkcji scanf . Wzorzec konwersji ma następującą
 postać:
-% [ * ] [ szerokość ] [ prefiks ] znak_konwersji
-Każdy wzorzec rozpoczyna się zawsze od znaku procenta %,
-składniki umieszczone w nawiasach prostokątnych nie muszą
-występować. Znak gwiazdki * użyty we wzorcu nakazuje pominąć
-kolejne pole znaków ze strumienia wejściowego. Szerokość określa
-maksymalną liczbę znaków, które mają być pobrane z kolejnego
-pola. Pole to może być krótsze niż zadana szerokość  w takim
-przypadku przetworzone będą jedynie znaki znajdujące się przed
-znakiem spacji lub nowej linii. Prefiks i znak_konwersji określają
-sposób przetworzenia znaków pola  wynikiem tego przetwarzania
-jest najczęściej wartość binarna liczby określonego typu. Kolejne
-wzorce konwersji są powiązane z kolejnymi wskaźnikami będącymi
-dalszymi argumentami funkcji scanf  obliczona wartość binarna
-liczby jest wprowadzana do obszaru pamięci wskazanego przez
-związany z danym wzorcem wskaźnik. Zakłada się przy tym, że typ
-wskaźnika związanego z wzorcem jest taki sam, jak typ konwersji
-zadanej w tym wzorcu. W tabelach podano znaczenie
-poszczególnych znaków konwersji i prefiksówznak k. wejściowe pole znaków d liczba całkowita dziesiętna int*
-D liczba całkowita dziesiętna long*
-o liczba całkowita oktalna int*
+**% [ * ] [ szerokość ] [ prefiks ] znak_konwersji**
+
+Każdy wzorzec rozpoczyna się zawsze od znaku procenta **%**, składniki umieszczone w nawiasach prostokątnych nie muszą
+występować. Znak gwiazdki * użyty we wzorcu nakazuje pominąć kolejne pole znaków ze strumienia wejściowego. Szerokość określa
+maksymalną liczbę znaków, które mają być pobrane z kolejnego pola. Pole to może być krótsze niż zadana szerokość - w takim
+przypadku przetworzone będą jedynie znaki znajdujące się przedznakiem spacji lub nowej linii. Prefiks i znak konwersji określają sposób przetworzenia znaków pola - wynikiem tego przetwarzania jest najczęściej wartość binarna liczby określonego typu. Kolejne
+wzorce konwersji są powiązane z kolejnymi wskaźnikami będącymi dalszymi argumentami funkcji scanf -  obliczona wartość binarnaliczby jest wprowadzana do obszaru pamięci wskazanego przez związany z danym wzorcem wskaźnik. Zakłada się przy tym, że typ
+wskaźnika związanego z wzorcem jest taki sam, jak typ konwersji zadanej w tym wzorcu. W tabelach podano znaczenie poszczególnych znaków konwersji i prefiksów.
+|`znak k.`| wejściowe pole znaków | typ wskażnika |
+|----  |----                   |----        |
+|`d`     |liczba całkowita dziesiętna |`int*`|
+|`D`| liczba całkowita dziesiętna |`long*`|
+|`o`| liczba całkowita oktalna |`int*`|
+
 O liczba całkowita oktalna long*
 i liczba całkowita dziesiętna, oktalna
 lub heksadecymalna int*
