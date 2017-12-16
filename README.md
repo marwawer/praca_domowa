@@ -20,12 +20,16 @@ Jak w każdym pozycyjnym systemie liczbowym, liczby zapisuje się tu jako ciągi
 **Przeliczanie liczb z systemu dziesiątnego na systemy: dwójkowy, ósemkowy i szesnastkowy**
 --
 
-Aby przeliczyć liczbę z systemu dziesiątkowego na inny, należy wykonać dzielenie z resztą liczby przez podstawę systemu liczbowego, na który jest przeliczana. Iloraz tych liczb ponownie dzielony jest przez podstawę systemu liczbowego, aż do wyniku równego zeru; liczba zapisana w innym systemie ma postać ciągu otrzymanych reszt z dzielenia zapisana od końca. Przykładowo
+Aby przeliczyć liczbę z systemu dziesiątkowego na inny, należy wykonać dzielenie z resztą liczby przez podstawę systemu liczbowego, na który jest przeliczana. Iloraz tych liczb ponownie dzielony jest przez podstawę systemu liczbowego, aż do wyniku równego zeru; liczba zapisana w innym systemie ma postać ciągu otrzymanych reszt z dzielenia zapisana od końca. 
 
+- Przykładowo
 
-    132 / 8 = 16  reszty  4 
-    16 / 8 = 2  reszty  0 
-    2 / 8 = 0  reszty  2 
-   skąd
+`132 / 8 = 16 reszty 4`
 
-    132 ( 10 ) = 204 ( 8 )
+`16  / 8 = 2  reszty 0`
+
+`2   / 8 = 0  reszty 2`
+    
+ skąd
+
+`132 ( 10 ) = 204 ( 8 )`
