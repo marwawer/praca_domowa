@@ -9,10 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4eda026-190e-4bf9-a4c3-ad5af262f12f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-    </list>
+    <list default="true" id="e4eda026-190e-4bf9-a4c3-ad5af262f12f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -158,7 +155,7 @@
       <updated>1513277793746</updated>
       <workItem from="1513277795167" duration="100000" />
       <workItem from="1513281162286" duration="26000" />
-      <workItem from="1513285093416" duration="559000" />
+      <workItem from="1513285093416" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1513285536070</created>
@@ -178,11 +175,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="685000" />
+    <option name="totallyTimeSpent" value="873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1360" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
