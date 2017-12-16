@@ -69,92 +69,30 @@ znaków -  składniki te muszą być dostosowane do typu wartości wyrażenia.
 |--|--|--|
 |`d`| `int`| liczba dziesiętna ze znakiem|
 |`i`|`int`| liczba dziesiętna ze znakiem|
+|`o`|`unsigned`| liczba oktalna bez znaku|
+|`u`| `unsigned`| liczba dziesiętna bez znaku|
+|`x`| `unsigned`| liczba heksadecymalna bez znaku`( a ... f )`|
+|`X`| `unsigned`| liczba heksadecymalna bez znaku `( A ... F)`|
+|`f`| `float`| liczba rzeczywista ze znakiem o postaci `ddd.ddd`|
+|`e`|`float`| liczba rzeczywista ze znakiemo postaci `d.ddde[+/-]ddd`|
+|`g`|`float`|konwersja `f lub e`, zależnie od wartości argumentu|
+|`E`|`float`|jak konwersja `e` z użyciem litery `E` do oznaczenia wykładnika|
+|`G`|`float`|jak konwersja `g` z użyciem litery `E` do oznaczenia wykładnika|
+|`s`| `char*`| ciąg znaków|
+|`c`| `char`| pojedynczy znak|
 
-o unsigned liczba oktalna bez znaku
-u unsigned liczba dziesiętna bez znaku
-x unsigned liczba heksadecymalna bez znaku
-( a ... f )
-X unsigned liczba heksadecymalna bez znaku
-( A ... F)
-f float liczba rzeczywista ze znakiem
-o postaci ddd.ddd
-e
-float
-liczba rzeczywista ze znakiem
-o postaci d.ddde[+/-]ddd
-g
-float
-konwersja f lub e , zależnie od
-wartości argumentu
-E
-float
-jak konwersja e z użyciem
-litery E do oznaczenia wykładnika
-G
-float
-jak konwersja g z użyciem
-litery E do oznaczenia wykładnika
-s char* ciąg znaków
-c char pojedynczy znak
-prefiks
-znaki konwersji
-typ wyrażenia
-h d, i, o, u, x, X short
-l d, i, o, u, x, X long
-e, E, f, g, G double
-e, E, f, g, G long double
-L
-W przypadku konwersji s , przeznaczonej dla ciągów znaków,
-wyprowadzanych jest co najwyżej tyle znaków, ile wskazano za
-pomocą składnika szerokość. Gdy składnik ten nie występuje we
-wzorcu, wyprowadzane są wszystkie znaki ciągu. Znak nowej linii
-‘\n’ jest zamieniany przez funkcję printf na parę znaków CR i LF, co
-powoduje przesunięcie kursora na początek następnego wiersza (z
-ewentualnym przewinięciem ekranu). Poprawnie są interpretowane
-również znaki sterujące: '\t’ (tabulacja pozioma HT ), '\r’ (powrót
-kursora CR ), '\b’ (cofnięcie kursora ze zmazaniem poprzedniego
-znaku BS ) i '\a’ (dzwonek BELL ). Składnik szerokość określaminimalną liczbę znaków, które zostaną wyprowadzone. Większa
-liczba znaków zostanie wyprowadzona, gdy w wyniku konwersji
-otrzymano ciąg znaków dłuższy od podanej szerokości. Jeżeli
-natomiast wynik konwersji zawiera mniej znaków, to zostanie on
-uzupełniony znakami spacji. Składnik opis jest jednym znakiem:
- uzupełnianie znakami spacji z prawej strony; gdy opis
-nie występuje, uzupełnia się z lewej strony,
-+ wyprowadzanie znaku liczby (plus albo minus); gdy opis
-nie występuje, wyprowadzany jest jedynie minus,
+|prefiks|znaki konwersji|typ wyrażenia|
+|--      |-- |----|
+|`h`| `d, i, o, u, x, X`| short|
+|`l`| `d, i, o, u, x, X`| long|
+| |`e, E, f, g, G`| double|
+|`L`| `e, E, f, g, G`| long double|
+
+W przypadku konwersji s , przeznaczonej dla ciągów znaków, wyprowadzanych jest co najwyżej tyle znaków, ile wskazano za pomocą składnika szerokość. Gdy składnik ten nie występuje we wzorcu, wyprowadzane są wszystkie znaki ciągu. Znak nowej linii ‘\n’ jest zamieniany przez funkcję printf na parę znaków CR i LF, co powoduje przesunięcie kursora na początek następnego wiersza (z ewentualnym przewinięciem ekranu). Poprawnie są interpretowane również znaki sterujące: '\t’ (tabulacja pozioma HT ), '\r’ (powrót
+kursora CR ), '\b’ (cofnięcie kursora ze zmazaniem poprzedniego znaku BS ) i '\a’ (dzwonek BELL ). Składnik szerokość określa minimalną liczbę znaków, które zostaną wyprowadzone. Większa liczba znaków zostanie wyprowadzona, gdy w wyniku konwersji otrzymano ciąg znaków dłuższy od podanej szerokości. Jeżeli natomiast wynik konwersji zawiera mniej znaków, to zostanie on uzupełniony znakami spacji. Składnik opis jest jednym znakiem:
+`-` uzupełnianie znakami spacji z prawej strony; gdy opis nie występuje, uzupełnia się z lewej strony,
+`+` wyprowadzanie znaku liczby (plus albo minus); gdy opis nie występuje, wyprowadzany jest jedynie minus,
 spacja wyprowadzanie znaku spacji zamiast znaku plus liczby.
-Składnik precyzja rozpoczyna się od znaku kropki i jest wartością
-całkowitą określającą liczbę miejsc po kropce dziesiętnej
-wyprowadzanej wartości zmiennopozycyjnej lub liczbę znaków
-podczas wyprowadzania ciągu znaków (konwersja s ). Gdy precyzja
-nie jest określona, wyprowadzanych jest 6 miejsc po kropce
-dziesiętnej.
-Wynik
-Przykład
+Składnik precyzja rozpoczyna się od znaku kropki i jest wartością całkowitą określającą liczbę miejsc po kropce dziesiętnej wyprowadzanej wartości zmiennopozycyjnej lub liczbę znaków podczas wyprowadzania ciągu znaków (konwersja s ). Gdy precyzja nie jest określona, wyprowadzanych jest 6 miejsc po kropce dziesiętnej.
+
 Wynikiem funkcji printf jest łączna liczba wyprowadzonych znaków.
-#include <stdio.h>
-void main(void)
-{
-.............
-int nBok = 15 ;
-printf ( "Wartość zmiennej nBok wynosi %d", nBok ) ;
-printf( "%d", nBok * nBok + 2 ) ;
-int anSzyk [ 5 ] = { 1, 2, 3, 4, 5 } ;
-for ( int nKolejny = 0 ; nKolejkny < 5 ; nKolejny++ )
-printf( "\nSzyk [%d]=%d", nKolejny, anSzyk [ nKolejny ] ) ;
-//
-float flSkok = 151.37825;
-printf ( "%+12.3f", flSkok ) ;
-// +151.378
-printf ( "%E", sin ( 1  1 / flSkok ) * cos ( 1 / exp( flSkok ) ) ;
-//
-long lCzas = 3782505 ;
-double dbKsiężyc = 27E38 ;
-long double ldMikrus = 5E127 ;
-printf ( "%ld \t %le \t %Le” , lCzas, dbKsiężyc, ldMikrus ) ;
-//char *szNapis = "raz dwa trzy" ;
-printf( "%s", szNapis ) ; // wszystkie znaki
-printf ( "%.7s", szNapis ) ; // 7 początkowych znaków
-printf ( " \n” ) ; // nowa linia
-...
-}
