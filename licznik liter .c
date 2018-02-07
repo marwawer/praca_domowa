@@ -17,6 +17,7 @@ int main()
     }
     for (int x = 0; x <26 ; ++x) {
         printf("%c,%c->%d \n", 'A'+x,'a'+x,histagram[x]);
+        
     }
 
 return 0;
